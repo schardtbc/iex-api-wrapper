@@ -1,5 +1,10 @@
 # IEX API Wrapper
 
+[![CircleCI](https://circleci.com/gh/schardtbc/iex-api-wrapper.svg?style=svg)](https://circleci.com/gh/schardtbc/iex-api-wrapper)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) 
+[![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 IEX Group operates the Investors Exchange (IEX), a stock exchange for U.S. equities that is built for investors and companies. They currently
 handle 3% of daily market trading volume
 
