@@ -1,7 +1,7 @@
 const baseURL = "https://api.iextrading.com/1.0";
 
 import axios from "axios";
-import * as date_fns from "date-fns"
+import * as date_fns from "date-fns";
 
 export const iexClient = async (endpoint: string) => {
   let tmp: string = "";
@@ -11,9 +11,9 @@ export const iexClient = async (endpoint: string) => {
 };
 
 export const getLastMarketOpenDate = (): string => {
-  const weekAdj = [2,3,1,1,1,1,1]
+  const weekAdj = [2, 3, 1, 1, 1, 1, 1];
   const today = new Date();
   let dayOfWeek = date_fns.getDay(today);
-  const priorDate = date_fns.subDays(today, weekAdj[dayOfWeek])
-  return date_fns.format(priorDate,"YYYYMMDD")
-}
+  const priorDate = date_fns.subDays(today, weekAdj[dayOfWeek]);
+  return date_fns.format(priorDate, "YYYYMMDD");
+};

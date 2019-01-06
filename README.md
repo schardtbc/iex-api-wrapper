@@ -36,9 +36,9 @@ import { iexClient } from "./iex";
 
 export class IEX {
 
-    public static allSymbols(){
-        return iexClient("/ref-data/symbols");
-      }
+  public static allSymbols(){
+    return iexClient("/ref-data/symbols");
+  }
 
   public static price(symbol: string) {
     return iexClient(`/stock/${symbol}/price`);

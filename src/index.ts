@@ -1,11 +1,9 @@
-
 import { iexClient } from "./iex";
 
 export class IEX {
-
-    public static allSymbols(){
-        return iexClient("/ref-data/symbols");
-      }
+  public static allSymbols() {
+    return iexClient("/ref-data/symbols");
+  }
 
   public static price(symbol: string) {
     return iexClient(`/stock/${symbol}/price`);
@@ -17,7 +15,7 @@ export class IEX {
 
   public static ohlc(symbol: string) {
     return iexClient(`/stock/${symbol}/ohlc`);
-  } 
+  }
 
   public static book(symbol: string) {
     return iexClient(`/stock/${symbol}/book`);
@@ -25,18 +23,18 @@ export class IEX {
 
   public static quote(symbol: string) {
     return iexClient(`/stock/${symbol}/quote`);
-  } 
+  }
 
   public static effectiveSpread(symbol: string) {
     return iexClient(`/stock/${symbol}/effective-spread`);
-  } 
+  }
 
   public static previous(symbol: string) {
     return iexClient(`/stock/${symbol}/previous`);
   }
 
   public static dividends(symbol: string, range: string = "6m") {
-    return iexClient(`/stock/${symbol}/dividends/${range}`);   
+    return iexClient(`/stock/${symbol}/dividends/${range}`);
   }
   public static earnings(symbol: string) {
     return iexClient(`/stock/${symbol}/earnings`);
@@ -51,19 +49,18 @@ export class IEX {
   }
 
   public static byMinuteToday(symbol: string) {
-    return iexClient(`/stock/${symbol}/chart/1d`);   
+    return iexClient(`/stock/${symbol}/chart/1d`);
   }
 
   public static byMinuteFor(symbol: string, dateAsYYYYMMDD: string) {
-    return iexClient(`/stock/${symbol}/chart/date/${dateAsYYYYMMDD}`);   
+    return iexClient(`/stock/${symbol}/chart/date/${dateAsYYYYMMDD}`);
   }
 
   public static annualFinancials(symbol: string) {
-    return iexClient(`/stock/${symbol}/financials?period=annual`)
+    return iexClient(`/stock/${symbol}/financials?period=annual`);
   }
 
   public static quarterlyFinancials(symbol: string) {
-    return iexClient(`/stock/${symbol}/financials?period=quarter`)
+    return iexClient(`/stock/${symbol}/financials?period=quarter`);
   }
-
 }
