@@ -9,13 +9,13 @@ https://iextrading.com/developer/docs/
 
 # Installation
 
-```
+```sh
 npm install iex-api-wrapper
 ```
 
 # Usage
 
-```{javascript}
+```javascript
 import IEX from "iex-api-wrapper"
 
 //remember that all IEX static methods return a Promise
@@ -26,7 +26,7 @@ IEX.price("AAPL").then(res => currentPrice = res);
 ```
 ## IEX public static methods
 
-```{javascript}
+```javascript
 import { iexClient } from "./iex";
 
 export class IEX {
