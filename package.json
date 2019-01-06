@@ -1,7 +1,7 @@
 {
-  "name": "replace_with_package_name",
+  "name": "iex-api-wrapper",
   "version": "1.0.0",
-  "description": "Replace Package Description",
+  "description": "Wrapper for api.iextrading.com/1.0/",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/schardtbc/ts-package-template.git"
+    "url": "git+https://github.com/schardtbc/iex-api-wrapper.git"
   },
   "keywords": [],
   "author": "Bruce C. Schardt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/schardtbc/ts-package-template/issues"
+    "url": "https://github.com/schardtbc/iex-api-wrapper/issues"
   },
-  "homepage": "https://github.com/schardtbc/ts-package-template#readme",
+  "homepage": "https://github.com/schardtbc/iex-api-wrapper#readme",
   "devDependencies": {
     "@types/jest": "23.3.11",
     "jest": "23.6.0",
@@ -40,6 +40,7 @@
     "lib/**/*"
   ],
   "dependencies": {
-
+    "axios": "0.18.0",
+    "date-fns": "1.30.1"
   }
 }
