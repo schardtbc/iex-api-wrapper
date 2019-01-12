@@ -4,7 +4,7 @@ import axios from "axios";
 import * as date_fns from "date-fns";
 
 export const iexClient = async (endpoint: string) => {
-  let tmp: object = {};
+  let tmp: any = {};
   const value = await axios.get<object>(baseURL + endpoint);
   tmp = value.data;
   return tmp;
