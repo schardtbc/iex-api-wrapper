@@ -63,14 +63,22 @@ export function quarterlyFinancials(symbol: string) {
   return iexClient(`/stock/${symbol}/financials?period=quarter`);
 }
 
-export function tops(symbols: string) {
-  return iexClient(`/tops?symbols=${symbols}`);
+export function tops(symbols: string = "") {
+  if (symbols) {
+    return iexClient(`/tops?symbols=${symbols}`);
+  } else {
+    return iexClient(`/tops`);
+  }
 }
 
-export function last(symbols: string) {
-  return iexClient(`/tops/last?symbols=${symbols}`);
+export function last(symbols: string = "") {
+  if (symbols) {
+    return iexClient(`/tops/last?symbols=${symbols}`);
+  } else {
+    return iexClient(`/tops/last`);    
+  }
 }
 
-export function auction(symbols: string) {
+export function auction(symbols: string = "") {
   return iexClient(`/deep/auction?symbols=${symbols}`);
 }
