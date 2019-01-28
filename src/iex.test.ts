@@ -1,4 +1,4 @@
-import { iexClient, getLastMarketOpenDate } from "./iex";
+import { getLastMarketOpenDate, iexClient } from "./iex";
 
 test("iexClient Exists", () => {
   expect(iexClient).toBeTruthy();

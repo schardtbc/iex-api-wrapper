@@ -2,7 +2,8 @@
  * @jest-environment node
  */
 
-import { IEX } from "./index";
+import * as IEX from "./index";
+
 import { getLastMarketOpenDate } from "./iex";
 
 test("Does allSymbols work with async await", async () => {
@@ -367,5 +368,42 @@ test('Apple Stock quarterlyFinancials("AAPL") works with async await', async () 
         })
       ])
     })
+  );
+});
+
+test("Apple Stock tops", async () => {
+  const tmp = await IEX.tops("AAPL");
+  expect(tmp).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        symbol: expect.any(String),
+        marketPercent: expect.any(Number),
+        bidSize: expect.any(Number),
+        bidPrice: expect.any(Number),
+        askSize: expect.any(Number),
+        askPrice: expect.any(Number),
+        volume: expect.any(Number),
+        lastSalePrice: expect.any(Number),
+        lastSaleSize: expect.any(Number),
+        lastSaleTime: expect.any(Number),
+        lastUpdated: expect.any(Number),
+        sector: expect.any(String),
+        securityType: expect.any(String)
+      })
+    ])
+  );
+});
+
+test("Apple Stock tops/last", async () => {
+  const tmp = await IEX.last("AAPL");
+  expect(tmp).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        symbol: expect.any(String),
+        price: expect.any(Number),
+        size: expect.any(Number),
+        time: expect.any(Number)
+      })
+    ])
   );
 });
